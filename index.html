@@ -5,14 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículum de Eliasib Vicente</title>
   <style>
-    body { font-family: sans-serif; background: #f9f9f9; text-align: center; margin: 2em; }
-    iframe { width: 90%; height: 800px; border: none; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+    :root {
+      --bg-color: #f7f8fa;
+      --primary-color: #1e293b;
+      --accent-color: #2563eb;
+      --text-color: #334155;
+      --card-bg: #ffffff;
+      --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    header {
+      margin-top: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.3rem;
+    }
+
+    p.subtitle {
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      margin-top: 0;
+    }
+
+    .cv-container {
+      background-color: var(--card-bg);
+      box-shadow: var(--shadow);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem;
+      max-width: 900px;
+      width: 90%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 850px;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    .buttons {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: #fff;
+      background-color: var(--accent-color);
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    a.button:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #64748b;
+      padding-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 600px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Currículum de Eliasib Vicente</h1>
-  <p>Puedes visualizar o descargar mi CV a continuación:</p>
-  <iframe src="CV_Eliasib.pdf"></iframe>
-  <p><a href="CV_Eliasib.pdf" download>Descargar PDF</a></p>
+  <header>
+    <h1>Currículum de Eliasib Vicente</h1>
+    <p class="subtitle">Versión digital 2025</p>
+  </header>
+
+  <section class="cv-container">
+    <iframe src="CV_Eliasib.pdf"></iframe>
+    <div class="buttons">
+      <a class="button" href="CV_Eliasib.pdf" download>Descargar PDF</a>
+      <a class="button" href="mailto:eliasib.vicente@example.com">Contactar</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Eliasib Vicente — Todos los derechos reservados.
+  </footer>
 </body>
 </html>
